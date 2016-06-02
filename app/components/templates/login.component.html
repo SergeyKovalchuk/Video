@@ -1,0 +1,41 @@
+<div class="loginForm">
+    <h1>Log In Form</h1>
+    <form [ngFormModel]="form">
+        <div class="form-group">
+			<input type="text" ngControl="username" class="form-control" required pattern="[A-Za-z]{6,}"/>
+
+			<div *ngIf="username.pending" class="alert alert-danger" role="alert">
+                <span class="sr-only"></span>
+                Please type in your name...
+            </div>
+
+			<div *ngIf="username.dirty && !username.valid && !username.pending" class="alert alert-danger" role="alert">
+                <span class="sr-only"></span>
+                <p *ngIf="username.errors.required">Username is required.</p>
+                <p *ngIf="username.errors.pattern">Username length must be more than 5 characters</p>
+                <p *ngIf="username.errors.startsWithNumber">Your username can't start with a number.</p>
+                <p *ngIf="username.errors.usernameTaken">This name is already taken.</p>
+			</div>
+        </div>
+
+        <div class="form-group">
+			<input type="text" ngControl="password" class="form-control" required /> <!-- pattern={6, 15} -->
+
+			<div *ngIf="password.pending" class="alert alert-danger" role="alert">
+                <span class="sr-only"></span>
+                Please type in password...
+            </div>
+
+			<div *ngIf="password.dirty && !password.valid && !password.pending" class="alert alert-danger" role="alert">
+                <span class="sr-only"></span>
+                <p *ngIf="password.errors.required">Password is required.</p>
+                <!-- <p *ngIf="password.errors.pattern">Password length must be more than 6 characters</p> -->
+                <p *ngIf="password.errors.passwordComplexity">Password length must be more than 6 characters</p>
+			</div>
+        </div>
+
+        <!-- [(ngModel)]="model.name" -->
+
+		<button (click)="submitData()" [disabled]="!form.valid" class="btn btn-primary">LOGIN</button>
+	</form>
+</div>

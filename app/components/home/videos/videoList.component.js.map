@@ -1,0 +1,1 @@
+{"version":3,"file":"videoList.component.js","sourceRoot":"","sources":["videoList.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAA0B,eAAe,CAAC,CAAA;AAG1C,qBAAmC,yBAAyB,CAAC,CAAA;AAQ7D;IAAA;IAEA,CAAC;IARD;QAAC,gBAAS,CAAC;YACP,QAAQ,EAAE,WAAW;YACrB,UAAU,EAAE,CAAC,yBAAkB,CAAC;YAChC,WAAW,EAAE,+CAA+C;SAC/D,CAAC;;sBAAA;IAIF,qBAAC;AAAD,CAAC,AAFD,IAEC;AAFY,sBAAc,iBAE1B,CAAA"}
